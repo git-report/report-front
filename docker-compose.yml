@@ -1,0 +1,14 @@
+version: '3.5'
+
+services:
+  frontend:
+    container_name: frontend
+    build: .
+    ports:
+      - 8080:8080
+    volumes:
+      - .:/app
+      - yarn_cache:/app/node_modules
+
+volumes:
+  yarn_cache:
